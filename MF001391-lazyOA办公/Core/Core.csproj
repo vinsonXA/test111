@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8C0E4C10-0DC8-40E2-8ACE-E68E858DF25B}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>Core</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Data" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Net.Json" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="WC.Common" />
+    <Reference Include="NHibernate" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="WC.Tool" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Core\OrganizationImpl.cs" />
+    <Compile Include="Core\IOrganizationStorage.cs" />
+    <Compile Include="Core\IRenderJson.cs" />
+    <Compile Include="Core\AccountInfo.cs" />
+    <Compile Include="Core\ReceiveResponsesHandler.cs" />
+    <Compile Include="Core\MessageCacheManagement.cs" />
+    <Compile Include="Core\IO\FileSystemInfo.cs" />
+    <Compile Include="Core\HtmlUtil.cs" />
+    <Compile Include="Core\IO\File.cs" />
+    <Compile Include="Core\IAttachmentStorage.cs" />
+    <Compile Include="Core\AccountSession.cs" />
+    <Compile Include="Core\CommandResponse.cs" />
+    <Compile Include="Core\ResponsesListener.cs" />
+    <Compile Include="Core\Message.cs" />
+    <Compile Include="Core\AccountState.cs" />
+    <Compile Include="Core\IMessageStorage.cs" />
+    <Compile Include="Core\SqlServerMessageStorage.cs" />
+    <Compile Include="Core\ServerImpl.cs" />
+    <Compile Include="Core\IO\Path.cs" />
+    <Compile Include="Core\SqlServerOrganizationStorage.cs" />
+    <Compile Include="Core\AttachmentImpl.cs" />
+    <Compile Include="Core\UnauthorizedException.cs" />
+    <Compile Include="Core\Text\TextTemplate.cs" />
+    <Compile Include="Core\MsgAccessoryEval.cs" />
+    <Compile Include="Core\MessageImpl.cs" />
+    <Compile Include="Core\IAccountStorage.cs" />
+    <Compile Include="Core\SqlServerAccountStorage.cs" />
+    <Compile Include="Core\IncompatibleException.cs" />
+    <Compile Include="Core\IO\Directory.cs" />
+    <Compile Include="Core\JsonText.cs" />
+    <Compile Include="Core\ClearSessionNode.cs" />
+    <Compile Include="Core\SessionManagement.cs" />
+    <Compile Include="Core\SendCommandHandler.cs" />
+    <Compile Include="Core\IO\DirectoryInfo.cs" />
+    <Compile Include="Core\Utility.cs" />
+    <Compile Include="Core\PermissionException.cs" />
+    <Compile Include="Core\IO\FileInfo.cs" />
+    <Compile Include="Core\DataBase.cs" />
+    <Compile Include="Core\CommandHandler.cs" />
+    <Compile Include="Core\AccountImpl.cs" />
+    <Compile Include="Core\IO\FileAttributes.cs" />
+    <Compile Include="Core\IOPermission.cs" />
+    <Compile Include="Core\Text\TextTemplateTag.cs" />
+    <Compile Include="Core\SqlServerAttachmentStorage.cs" />
+    <Compile Include="Core\FriendInfo.cs" />
+  </ItemGroup>
+</Project>
